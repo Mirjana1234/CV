@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitt CV</title>
+    <!-- Länk till Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Länk till Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Grundläggande stil för sidan */
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container för hela CV-layouten */
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+        }
+
+        /* Vänsterkolumnens stil */
+        .left-column {
+            width: 30%;
+            background: linear-gradient(135deg, #00796b, #004d40);
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 8px 0 0 8px;
+            text-align: center;
+        }
+
+        .left-column h1, .left-column p, .left-column ul li {
+            color: #f1f1f1;
+            font-weight: bold;
+        }
+
+        .left-column img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .left-column img:hover {
+            transform: scale(1.3);
+        }
+
+        /* Högerkolumnens stil */
+        .right-column {
+            width: 70%;
+            padding: 20px;
+            background-color: #f1f8e9;
+            color: #2e7d32;
+            border-radius: 0 8px 8px 0;
+        }
+
+        h2 {
+            color: #00796b;
+            border-bottom: 2px solid #00796b;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        ul li:hover {
+            color: #004d40;
+            cursor: pointer;
+        }
+
+        .fa {
+            margin-right: 10px;
+            color: #00796b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Vänsterkolumn -->
+        <div class="left-column">
+            <img src="bild.png" alt="Profilbild">
+            <h1>Mirjana Vasic</h1>
+            <p><strong>Roll:</strong> IT-Projektledare</p>
+            
+            <!-- Kontaktinformation -->
+            <h2>Kontaktinformation</h2>
+            <p><i class="fas fa-envelope"></i> mirjanavasic91@gmail.com</p>
+            <p><i class="fas fa-phone"></i> 0728358699</p>
+            <p><i class="fas fa-map-marker-alt"></i> Arlöv, 23234</p>
+            
+            <h2>Profil</h2>
+            <p>Nyfiken och engagerad nybörjare inom IT, med en stark problemlösningsförmåga och analytiskt tänkande.</p>
+            <h2>Kompetenser</h2>
+            <ul>
+                <li><i class="fas fa-code"></i> Programmering</li>
+                <li><i class="fas fa-users"></i> Ledarskap</li>
+                <li><i class="fas fa-lightbulb"></i> Problemlösning</li>
+            </ul>
+            <h2>Certifikat</h2>
+            <ul>
+                <li><i class="fas fa-certificate"></i> Certified Scrum Master</li>
+                <li><i class="fas fa-certificate"></i> AWS Certified Developer</li>
+            </ul>
+        </div>
+
+        <!-- Högerkolumn -->
+        <div class="right-column">
+            <h2>Arbetslivserfarenhet</h2>
+            <ul>
+                <li><i class="fas fa-briefcase"></i> <strong>Saneringsarbetare:</strong> Tinco International AB, Malmö, 2024 - 2019</li>
+                <li><i class="fas fa-briefcase"></i> <strong>Garni Hotel Vizura:</strong> Belgrad, Serbien, 2019 - 2014
+                    <ul>
+                        <li>&#x2794; Chef (2019 - 2016)</li>
+                        <li>&#x2794; Desk Office Manager (2016 - 2015)</li>
+                        <li>&#x2794; Desk Officer (2015 - 2014)</li>
+                    </ul>
+                </li>
+                <li><i class="fas fa-briefcase"></i> <strong>Butikssäljare:</strong> "Legend WORLD Wide", Belgrad, 2014 - 2013</li>
+                <li><i class="fas fa-briefcase"></i> <strong>Butikssäljare:</strong> Intidex Group (ZARA), Belgrad, 2013 - 2012</li>
+            </ul>
+            <h2>Utbildning</h2>
+            <ul>
+                <li><i class="fas fa-graduation-cap"></i> <strong>2024:</strong> Programmering 1 (C#, Visual Studio) - Komvux Burlöv, Sverige</li>
+                <li><i class="fas fa-graduation-cap"></i> <strong>2024:</strong> Svenska gymnasienivå 1, 2, 3 - Komvux Burlöv, Sverige</li>
+                <li><i class="fas fa-graduation-cap"></i> <strong>2023:</strong> Svenska grundnivå 1, 2, 3, 4 - Komvux Malmö, Sverige</li>
+                <li><i class="fas fa-graduation-cap"></i> <strong>2014–2010:</strong> College of Professional Studies of Tourism - Belgrad, Serbien</li>
+                <li><i class="fas fa-graduation-cap"></i> <strong>2010–2006:</strong> Gymnasieskolan - Serbien</li>
+            </ul>
+            <h2>Färdigheter</h2>
+            <ul>
+                <li><i class="fas fa-comments"></i> Lyhörd kommunikatör, snabb och effektiv problemlösare</li>
+                <li><i class="fas fa-tasks"></i> Strukturerad ordning och organisation i administrativa uppgifter</li>
+                <li><i class="fas fa-handshake"></i> Kundservice och relationsbyggande</li>
+                <li><i class="fas fa-hotel"></i> Erfarenhet av hotellreception och försäljning teknik</li>
+                <li><i class="fas fa-chart-line"></i> Ekonomisk förståelse</li>
+                <li><i class="fas fa-users-cog"></i> Personal hantering</li>
+                <li><i class="fas fa-tools"></i> Teknisk kompetens</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
