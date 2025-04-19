@@ -16,9 +16,6 @@ Jag är en engagerad och nyfiken IT-entusiast med stark problemlösningsförmåg
 - **Svenska grundnivå 1, 2, 3, 4** - Komvux Malmö, Sverige (2023)
 - **College of Professional Studies of Tourism** - Belgrad, Serbien (2010-2014)
 
-## 📜 Certifikat
-- Certified Scrum Master
-- AWS Certified Developer
 
 
 
