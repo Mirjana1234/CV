@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mirjana Vasic - IT-Projektledare CV">
+    <title>Mirjana Vasic - CV</title>
+    <!-- Länk till Google Fonts med bättre typsnitt -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Länk till Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Grundläggande stil för sidan med förbättrade färger och typografi */
+        :root {
+            --primary-color: #34a49b;
+            --secondary-color: #6c757d;
+            --accent-color: #20c997;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+            --background-gradient: linear-gradient(135deg, #0dfded, #2ec9b5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f2f5;
+            color: var(--dark-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container för hela CV-layouten med responsiv design */
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            background: var(--light-color);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+        }
+
+        /* Vänsterkolumnens stil med förbättrad design */
+        .left-column {
+            width: 30%;
+            background: var(--background-gradient);
+            color: white;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-container {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            object-fit: cover;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-image:hover {
+            transform: scale(1.1);
+            border-color: white;
+        }
+
+        .left-column h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: white;
+        }
+
+        .role {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: white;
+            margin: 20px 0 10px;
+            position: relative;
+            padding-bottom: 8px;
+            width: 100%;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        .contact-info {
+            width: 100%;
+            margin-bottom: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .contact-item i {
+            width: 25px;
+            color: var(--accent-color);
+            font-size: 1rem;
+        }
+
+        .contact-text {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .skill-list, .certificate-list {
+            width: 100%;
+            list-style: none;
+        }
+
+        .skill-item, .cert-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            transition: transform 0.2s;
+        }
+
+        .skill-item:hover, .cert-item:hover {
+            transform: translateX(5px);
+        }
+
+        .skill-item i, .cert-item i {
+            width: 25px;
+            color: var(--accent-color);
+            font-size: 1rem;
+        }
+
+        .profile-text {
+            text-align: left;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        /* Högerkolumnens stil med förbättrad layout */
+        .right-column {
+            width: 70%;
+            padding: 30px;
+            background-color: white;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-header {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--primary-color);
+            position: relative;
+        }
+
+        .section-header i {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 30px; /* Ökad padding för att göra plats för ikoner */
+        }
+
+        .experience-item::before, .education-item::before {
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 5px;
+            color: var(--primary-color);
+            font-size: 18px;
+        }
+
+        /* Speciella ikoner för olika erfarenheter */
+        .experience-item.sanering::before {
+            content: '\f0ad'; /* Verktyg */
+        }
+
+        .experience-item.hotel::before {
+            content: '\f594'; /* Hotell */
+        }
+
+        .experience-item.retail::before {
+            content: '\f54e'; /* Butik */
+        }
+
+        /* Ikoner för utbildning */
+        .education-item.programming::before {
+            content: '\f121'; /* Kod */
+        }
+
+        .education-item.language::before {
+            content: '\f1ab'; /* Språk */
+        }
+
+        .education-item.college::before {
+            content: '\f19d'; /* Examenshatt */
+        }
+
+        .education-item.highschool::before {
+            content: '\f549'; /* Skola */
+        }
+
+        /* Projekt ikoner */
+        .experience-item.project-web::before {
+            content: '\f5fc'; /* Webb */
+        }
+
+        .experience-item.project-app::before {
+            content: '\f108'; /* Dator */
+        }
+
+        .experience-title, .education-title {
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .experience-company, .education-institution {
+            font-weight: normal;
+            font-style: italic;
+            color: var(--secondary-color);
+        }
+
+        .experience-period, .education-period {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+
+        .experience-description {
+            margin-top: 5px;
+            font-size: 0.95rem;
+        }
+
+        .sub-positions {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+
+        .sub-position {
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+            position: relative;
+            padding-left: 25px; /* Ökad padding för ikoner */
+        }
+
+        .sub-position::before {
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+
+        .sub-position.manager::before {
+            content: '\f0b1'; /* Portfölj */
+        }
+
+        .sub-position.office::before {
+            content: '\f2bd'; /* Användare */
+        }
+
+        .sub-position.service::before {
+            content: '\f2b5'; /* Handslag */
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill-tag {
+            background-color: #e9ecef;
+            padding: 8px 15px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .skill-tag i {
+            margin-right: 8px;
+            color: var(--primary-color);
+        }
+
+        .skill-tag:hover i {
+            color: white;
+        }
+
+        /* Responsiv design */
+        @media screen and (max-width: 900px) {
+            .container {
+                flex-direction: column;
+                width: 95%;
+            }
+
+            .left-column, .right-column {
+                width: 100%;
+            }
+        }
+
+        /* Animationer */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .container {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        /* Print-vänlig styling */
+        @media print {
+            body {
+                background-color: white;
+            }
+
+            .container {
+                box-shadow: none;
+                margin: 0;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Vänsterkolumn med förbättrad struktur -->
+        <div class="left-column">
+            <div class="profile-container">
+                <img src="bild.png" alt="Mirjana Vasic" class="profile-image">
+                <h1>Mirjana Vasic</h1>
+                <p class="role">Web utvecklare</p>
+            </div>
+            
+            <h2 class="section-title">Kontaktuppgifter</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span class="contact-text">mirjanavasic91@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span class="contact-text">0728358699</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="contact-text">Arlöv, 23234</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <span class="contact-text">linkedin.com/in/mirjanavasic</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <span class="contact-text">github.com/mirjanavasic</span>
+                </div>
+            </div>
+            
+            <h2 class="section-title">Profil</h2>
+            <p class="profile-text">Nyfiken och engagerad nybörjare inom IT, med en stark problemlösningsförmåga och analytiskt tänkande. Jag kombinerar min erfarenhet av ledarskap med en passion för tekniska lösningar.</p>
+            
+            <h2 class="section-title">Kompetenser</h2>
+            <ul class="skill-list">
+                <li class="skill-item">
+                    <i class="fas fa-code"></i>
+                    <span>Programmering (C#)</span>
+                </li>
+                <li class="skill-item">
+                    <i class="fas fa-users"></i>
+                    <span>Ledarskap</span>
+                </li>
+                <li class="skill-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Problemlösning</span>
+                </li>
+                <li class="skill-item">
+                    <i class="fas fa-tasks"></i>
+                    <span>Projektledning</span>
+                </li>
+            </ul>
+            
+            <h2 class="section-title">Certifikat</h2>
+            <ul class="certificate-list">
+                <li class="cert-item">
+                    <i class="fas fa-certificate"></i>
+                    <span>Certified Scrum Master</span>
+                </li>
+                <li class="cert-item">
+                    <i class="fas fa-certificate"></i>
+                    <span>AWS Certified Developer</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Högerkolumn med förbättrad layout -->
+        <div class="right-column">
+            <div class="section">
+                <h2 class="section-header"><i class="fas fa-briefcase"></i>Arbetslivserfarenhet</h2>
+                
+                <div class="experience-item sanering">
+                    <div class="experience-title">
+                        <span>Saneringsarbetare</span>
+                        <span class="experience-period">2019 - 2024</span>
+                    </div>
+                    <div class="experience-company">Tinco International AB, Malmö</div>
+                    <p class="experience-description">Ansvarig för att genomföra professionell sanering och underhåll enligt företagets standarder och kundernas behov.</p>
+                </div>
+                
+                <div class="experience-item hotel">
+                    <div class="experience-title">
+                        <span>Olika roller</span>
+                        <span class="experience-period">2014 - 2019</span>
+                    </div>
+                    <div class="experience-company">Garni Hotel Vizura, Belgrad, Serbien</div>
+                    <div class="sub-positions">
+                        <div class="sub-position manager">Chef (2016 - 2019) - Ledarskap, personalansvar och verksamhetsledning</div>
+                        <div class="sub-position office">Desk Office Manager (2015 - 2016) - Koordination av receptionen och kundbemötande</div>
+                        <div class="sub-position service">Desk Officer (2014 - 2015) - Gästservice och bokningsadministration</div>
+                    </div>
+                </div>
+                
+                <div class="experience-item retail">
+                    <div class="experience-title">
+                        <span>Butikssäljare</span>
+                        <span class="experience-period">2013 - 2014</span>
+                    </div>
+                    <div class="experience-company">"Legend WORLD Wide", Belgrad</div>
+                    <p class="experience-description">Kundservice och försäljning i butiksmiljö.</p>
+                </div>
+                
+        
+            
+            <div class="section">
+                <h2 class="section-header"><i class="fas fa-graduation-cap"></i>Utbildning</h2>
+                
+                <div class="education-item programming">
+                    <div class="education-title">
+                        <span>Programmering 1 (C#, Visual Studio)</span>
+                        <span class="education-period">2024</span>
+                    </div>
+                    <div class="education-institution">Komvux Burlöv, Sverige</div>
+                </div>
+                
+                <div class="education-item language">
+                    <div class="education-title">
+                        <span>Svenska gymnasienivå 1, 2, 3</span>
+                        <span class="education-period">2024</span>
+                    </div>
+                    <div class="education-institution">Komvux Burlöv, Sverige</div>
+                </div>
+                
+            
+                
+                <div class="education-item college">
+                    <div class="education-title">
+                        <span>College of Professional Studies of Tourism</span>
+                        <span class="education-period">2010 - 2014</span>
+                    </div>
+                    <div class="education-institution">Belgrad, Serbien</div>
+                </div>
+                
+                <div class="education-item highschool">
+                    <div class="education-title">
+                        <span>Gymnasieutbildning</span>
+                        <span class="education-period">2006 - 2010</span>
+                    </div>
+                    <div class="education-institution">Serbien</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-header"><i class="fas fa-cogs"></i>Färdigheter</h2>
+                <div class="skills-container">
+                    <div class="skill-tag">
+                        <i class="fas fa-comments"></i>
+                        <span>Kommunikation</span>
+                    </div>
+                    <div class="skill-tag">
+                        <i class="fas fa-tasks"></i>
+                        <span>Organisation</span>
+                    </div>
+                    <div class="skill-tag">
+                        <i class="fas fa-handshake"></i>
+                        <span>Kundservice</span>
+                    </div>
+                    <div class="skill-tag">
+                        <i class="fas fa-hotel"></i>
+                        <span>Hotellkunskap</span>
+                    </div>
+                    <div class="skill-tag">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Ekonomisk förståelse</span>
+                    </div>
+                    <div class="skill-tag">
+                        <i class="fas fa-users-cog"></i>
+                        <span>Personalledning</span>
+                    </div>
+                    <div class="skill-tag">
+                        <i class="fas fa-tools"></i>
+                        <span>Teknisk kompetens</span>
+                    </div>
+                    <div class="skill-tag">
+                        <i class="fas fa-language"></i>
+                        <span>Flerspråkig</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-header"><i class="fas fa-project-diagram"></i>Projekt</h2>
+                <div class="experience-item project-web">
+                    <div class="experience-title">
+                        <span>Personlig portfolio</span>
+                        <span class="experience-period">2024</span>
+                    </div>
+                    <div class="experience-company">GitHub</div>
+                    <p class="experience-description">Utveckling av en personlig webbportfolio med HTML, CSS och JavaScript för att visa mina projekt och färdigheter.</p>
+                </div>
+                <div class="experience-item project-app">
+                    <div class="experience-title">
+                        <span>C# Konsollapplikation</span>
+                        <span class="experience-period">2024</span>
+                    </div>
+                    <div class="experience-company">Komvux Burlöv</div>
+                    <p class="experience-description">Utvecklat en enkel bokningsapplikation med C# för att tillämpa grundläggande programmeringskoncept.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
